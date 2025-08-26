@@ -17,9 +17,9 @@ html, body {
 
 /* Navbar */
 .navbar {
-    background: rgba(44, 62, 80, 0.85); /* Semi-transparent background */
+    background: rgba(14, 20, 26, 0.85); /* Semi-transparent background */
     backdrop-filter: blur(20px); /* Blur effect matching hero overlay */
-    padding: 15px 0;
+    padding: 20px 0; /* Increased padding for larger navbar */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     position: sticky;
     top: 0;
@@ -27,28 +27,33 @@ html, body {
 }
 
 .navbar-brand img {
-    height: 50px;
+    height: 60px; /* Slightly larger logo */
     width: auto;
     transition: transform 0.3s ease;
 }
 
 .navbar-brand img:hover {
-    transform: scale(1.1);
+    transform: scale(1.15); /* Enhanced hover effect for logo */
 }
 
+/* Navigation Links */
 .nav-link {
     color: var(--text-light) !important;
-    font-weight: 500;
-    font-size: 1.1rem;
-    padding: 10px 20px !important;
+    font-weight: 600; /* Bolder font for prominence */
+    font-size: 1.3rem; /* Larger font size */
+    padding: 12px 24px !important; /* Larger padding for bigger buttons */
     border-radius: 999px;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease; /* Smoother transition */
+    position: relative;
+    overflow: hidden;
 }
 
 .nav-link:hover,
 .nav-link.active {
     color: var(--brand) !important;
-    transform: translateY(-2px);
+    transform: scale(1.05) translateY(-3px); /* Scale and lift effect */
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4); /* Glow effect */
+    background: rgba(0, 123, 255, 0.2); /* Subtle background on hover */
 }
 
 .nav-link:focus-visible {
@@ -63,11 +68,11 @@ html, body {
     border: none;
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    margin-top: 5px;
+    margin-top: 8px;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(10px);
-    transition: all 0.3s ease;
+    transform: translateY(12px);
+    transition: all 0.4s ease-in-out; /* Smoother dropdown animation */
 }
 
 .dropdown:hover .dropdown-menu {
@@ -79,23 +84,25 @@ html, body {
 
 .dropdown-item {
     color: var(--text-dark);
-    font-weight: 400;
-    padding: 10px 20px;
-    transition: all 0.3s ease;
+    font-weight: 500; /* Bolder font for dropdown items */
+    font-size: 1.2rem; /* Larger font size */
+    padding: 12px 24px; /* Larger padding for bigger items */
+    transition: all 0.4s ease;
+    border-radius: 8px;
 }
 
 .dropdown-item:hover {
-    background: rgba(0, 123, 255, 0.85); /* Semi-transparent brand color with blur */
+    background: linear-gradient(90deg, var(--brand), var(--brand-dark)); /* Gradient background */
     backdrop-filter: blur(20px); /* Maintain blur on hover */
-    color: #000000 !important;
-    border-radius: 8px;
-    transform: scale(1.02);
+    color: #ffffff !important; /* White text for contrast */
+    transform: scale(1.05); /* Slight scale effect */
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4); /* Glow effect */
 }
 
 /* Toggler Icon for Mobile */
 .navbar-toggler {
     border: none;
-    padding: 10px;
+    padding: 12px;
 }
 
 .navbar-toggler-icon {
@@ -223,10 +230,11 @@ html, body {
 /* Mobile Responsiveness */
 @media (max-width: 991px) {
     .navbar-nav {
-        padding: 15px 0;
+        padding: 20px 0; /* Increased padding for mobile */
     }
     .nav-link {
-        padding: 10px 15px !important;
+        font-size: 1.2rem; /* Slightly smaller for mobile */
+        padding: 12px 15px !important;
     }
     .dropdown-menu {
         background: rgba(255, 255, 255, 0.85); /* Maintain blur on mobile */
@@ -236,6 +244,10 @@ html, body {
         transform: none;
         opacity: 1;
         visibility: visible;
+    }
+    .dropdown-item {
+        font-size: 1.1rem; /* Slightly smaller for mobile */
+        padding: 10px 20px;
     }
     .hero-overlay h1 {
         font-size: 2rem;
