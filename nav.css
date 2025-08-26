@@ -17,7 +17,8 @@ html, body {
 
 /* Navbar */
 .navbar {
-    background: linear-gradient(135deg, #2c3e50, #34495e);
+    background: rgba(44, 62, 80, 0.85); /* Semi-transparent background */
+    backdrop-filter: blur(20px); /* Blur effect matching hero overlay */
     padding: 15px 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     position: sticky;
@@ -57,7 +58,8 @@ html, body {
 
 /* Dropdown Menu */
 .dropdown-menu {
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.85); /* Semi-transparent background */
+    backdrop-filter: blur(20px); /* Blur effect for dropdown */
     border: none;
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
@@ -83,7 +85,8 @@ html, body {
 }
 
 .dropdown-item:hover {
-    background: linear-gradient(90deg, var(--brand), var(--brand-dark));
+    background: rgba(0, 123, 255, 0.85); /* Semi-transparent brand color with blur */
+    backdrop-filter: blur(20px); /* Maintain blur on hover */
     color: #000000 !important;
     border-radius: 8px;
     transform: scale(1.02);
@@ -103,19 +106,21 @@ html, body {
 .hero-section {
     position: relative;
     min-height: calc(100vh - var(--nav-h));
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('Imagenes/LogoIglesia1.jpg') no-repeat center center/cover;
-    color: #fff;
+    background: url('Imagenes/LogoIglesia1.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 2rem;
+    color: #1d1d1f;
 }
 
 .hero-overlay {
-    background: transparent;
-    width: 100%;
-    padding: 2rem;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    padding: 2.5rem;
+    max-width: 700px;
+    margin: auto;
 }
 
 .hero-overlay h1 {
@@ -188,6 +193,10 @@ html, body {
 
 .feature-text {
     max-width: 500px;
+    background: rgba(255, 255, 255, 0.85); /* Semi-transparent background */
+    backdrop-filter: blur(20px); /* Blur effect for text boxes */
+    border-radius: 12px;
+    padding: 20px;
 }
 
 .feature-text h3 {
@@ -220,7 +229,8 @@ html, body {
         padding: 10px 15px !important;
     }
     .dropdown-menu {
-        background: #f8f9fa;
+        background: rgba(255, 255, 255, 0.85); /* Maintain blur on mobile */
+        backdrop-filter: blur(20px);
         border-radius: 8px;
         box-shadow: none;
         transform: none;
@@ -238,4 +248,7 @@ html, body {
         text-align: center;
     }
 }
+
+
+
 
